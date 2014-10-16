@@ -8,4 +8,8 @@ describe Team do
   it "this is a failing test" do
     fail "this should fail"
   end
+
+  it "this is another failing test" do
+    fail "this should fail"
+  end
 end
