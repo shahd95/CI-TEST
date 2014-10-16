@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 describe Team do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should have name" do
+    Team.new.should respond_to(:name)
+  end
 end
