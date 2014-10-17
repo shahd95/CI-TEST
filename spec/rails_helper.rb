@@ -5,6 +5,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/rails'
+require 'capybara/poltergeist'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -56,7 +57,7 @@ RSpec.configure do |config|
   # of your tests resetting it to the default will ensure that its reset to what
   # you specified when starting the tests.
   # possible options for ENV["CAPYBARA_DRIVER"]: selenium_chrome selenium_firefox mobile poltergeist poltergeist_quite_errors poltergeist_debug
-  capybara_driver_key = (ENV["CAPYBARA_DRIVER"] || :selenium_firefox).to_sym
+  capybara_driver_key = (ENV["CAPYBARA_DRIVER"] || :poltergeist_quite_errors).to_sym
   Capybara.default_driver = capybara_driver_key
   Capybara.javascript_driver = capybara_driver_key
   Capybara.default_wait_time = 30
