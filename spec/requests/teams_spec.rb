@@ -6,5 +6,12 @@ RSpec.describe "Teams", :type => :request do
       get teams_path
       expect(response).to have_http_status(200)
     end
+
+    it "should have JS running" do
+      visit teams_path
+      header = evaluate_script("$('h1').text()")
+      expect(header).to include "teams"
+    end
   end
+
 end
