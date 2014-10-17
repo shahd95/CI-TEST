@@ -44,4 +44,6 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'selenium-webdriver'
+  gem 'poltergeist'
 end
